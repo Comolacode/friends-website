@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends</title>
+</head>
+<style>
+    body{
+        background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/426/original/friends.frames.jpeg?1707932631');
+    }
+    @font-face {
+        font-family: myFonts;
+        src: url(MINUS_CRE.ttf);
+    }
+    h1{
+        font-family: myFonts;
+        text-align: center;
+        font-size: 40px;
+        padding: 30px;
+    }
+    .container{
+        margin: 60px auto;
+        background-color: #fff;
+        max-width: 550px;
+        padding: 50px;
+        border-radius: 16px;
+    }
+    p{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 2px;
+    }
+    .orange{
+        padding: 20px auto;
+    }
+    button{
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color:gold;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .slideshow{
+       margin-top: 20px auto;
+       text-align: center;
+    }
+    .orange{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>
+        F R I E N D S 
+    </h1>
+    <div class="container">
+        <p>
+            Friends is a popular American television sitcom that aired from 1994 to 2004. It follows the lives of six friends in
+            New York City as they navigate their way through life, love, and friendship.
+        </p>
+        <div class="slideshow">
+        <script>
+            var i = 0;
+            var images = [];
+            var time = 3000;
+
+            images[0] = `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/425/original/friends.centralperk.jpeg?1707932622`;
+            images [1] = `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/427/original/friends.guysfacial.jpeg?1707932638`;
+            images [2] = `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/433/original/friends.colorful.jpeg?1707933453`;
+            images[3] = `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/429/original/friends.weddingdresses.jpeg?1707932656`;
+            images[4] = `https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/435/original/friends.wwalking.jpeg?1707936500`;
+
+            function changeImg(){
+                document.slide.src = images[i];
+
+                if (i < images.length - 1){
+                    i ++;
+                } else {
+                    i = 0;
+                }
+
+                setTimeout("changeImg()", time);
+            }
+            window.onload = changeImg;
+
+        </script>
+
+        <img name = "slide" width = "500" height = "300">
+
+        <div class="orange">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/430/original/Orangecouch_copy.jpeg?170793267" width="250" height="150">
+            </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RjpvuPAzJUw?si=R_dSl4DlcgOxr7Qm"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+        <div class="myDiv">
+            <a href="https://www.max.com/" target="_blank">
+                <button>Visit HBO Max</button>
+        </div>
+</body>
+</html>
